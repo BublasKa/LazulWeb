@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazul - 2.vydání časopisu</title>
+    <link rel="stylesheet" href="../css/prohlizeni.css">
+</head>
+<body>
+
+
+
+
+    <header>
+        <h1>2. vydání</h1>
+        <a href="../ctivo.html" class="back-button">Zpět na čtivo</a>
+    </header>
+    <main>
+        <div class="viewer-container">
+            <div id="viewer">
+                <canvas id="pdf-viewer"></canvas>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prev-page">◄◄</button>
+            <span id="page-info"></span>
+            <button id="next-page">►►</button>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+
+
+
+
+    <script>
+
+        const url = 'strany/v2.pdf'; // Cesta k PDF souboru
+
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+
+
+        let pdfDoc = null,
+            pageNum = 1,
+            pageIsRendering = false,
+            pageNumPending = null;
+
+        const scale = 1.5; // Velikost zobrazení
+        const canvas = document.getElementById('pdf-viewer');
+        const ctx = canvas.getContext('2d');
+
+        // Renderování stránky
+        const renderPage = (num) => {
+            pageIsRendering = true;
+
+            // Získání stránky
+            pdfDoc.getPage(num).then(page => {
+                const viewport = page.getViewport({ scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                page.render(renderContext).promise.then(() => {
+                    pageIsRendering = false;
+
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+
+                document.getElementById('page-info').textContent = `${num} z ${pdfDoc.numPages}`;
+            });
+        };
+
+        // Načtení PDF
+        pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+            pdfDoc = pdfDoc_;
+            renderPage(pageNum);
+        });
+
+        // Změna stránky
+        const queueRenderPage = (num) => {
+            if (pageIsRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        };
+
+        // Tlačítko předchozí
+        document.getElementById('prev-page').addEventListener('click', () => {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        });
+
+        // Tlačítko další
+        document.getElementById('next-page').addEventListener('click', () => {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        });
+
+    </script>
+</body>
+</html>
