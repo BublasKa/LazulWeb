@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úkoly</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <img id="logo" src="../favicon.png" alt="Logo Lazul">
+        <a class="nav" href="../index.html">DOMŮ</a>
+        <a class="nav" href="../ctivo.html">ČTIVO</a>
+        <a class="nav" href="../hry.html">ZPĚT</a>
+    </header>
+
+    <main>
+        <section style="border-width: 5px; width: 60%;" class="sec red">
+            <p>Úkol <span id="currentTask">1</span> z <span id="totalTasks">3</span></p>
+        </section>
+
+        <section style="border-width: 5px; width: 84%;" class="sec yellow">
+            <div id="task"></div>
+        </section>
+
+        <section class="sec blue" style="border-width: 5px; width: 75%;">
+            <h2>K odpovědi:</h1>
+            <br>
+            <h2 id="feedback"></h2>
+            <br>
+            <form id="send-email" action="nj-email.php" method="post" style="display: none;">
+                <input type="input" name="name" id="studentName" placeholder="Jméno a příjmení (žáka)" value="">
+                <input type="hidden" name="errors" id="errorCount" value="">
+                <button type="submit">Odeslat výsledek učiteli</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="nj-8lekce-slovicka.js"></script>
+</body>
+</html>
