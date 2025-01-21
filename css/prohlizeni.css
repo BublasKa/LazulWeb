@@ -1,0 +1,94 @@
+
+/* Základní stylování */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: yellow;
+    color: rgb(63, 0, 0);
+    padding: 1rem;
+    text-align: center;
+}
+
+header .back-button {
+    color: rgb(63, 0, 0);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgb(63, 0, 0);
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+header .back-button:hover {
+    background-color: rgb(255, 190, 190);
+    color: green;
+}
+
+.viewer-container {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    margin: 2rem 0;
+}
+
+#viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pdf-viewer {
+    border: 1px solid #ddd;
+    max-height: 70vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 2000px) {
+    #pdf-viewer {
+        max-height: 43vh;
+    }
+}
+
+@media (min-width: 1000px) {
+    #pdf-viewer {
+        max-height: 60vh;
+    }
+}
+
+@media (max-width: 500px) {
+    #pdf-viewer {
+        max-height: 53vh;
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.controls button:hover {
+    background-color: blue;
+}
+
+#page-info {
+    font-size: 1rem;
+}

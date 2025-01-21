@@ -1,0 +1,43 @@
+
+/* KONTEJNER S KOLEČKY */
+.circle-container {
+    display: flex;
+    flex-wrap: wrap; /* Kolečka se zalamují na další řádek */
+    justify-content: center; /* Horizontální zarovnání na střed */
+    gap: 30px; /* Velká mezera mezi kolečky */
+    width: 97%; /* Šířka celého kontejneru */
+    margin: 0 auto; /* Středování kontejneru */
+}
+
+/* KOLEČKA */
+.circle {
+    width: clamp(100px, 15vw, 200px); /* Dynamická velikost koleček */
+    height: clamp(100px, 15vw, 200px); /* Zachování poměru koleček */
+    border-radius: 50%; /* Kulatý tvar */
+    object-fit: cover; /* Přizpůsobení obrázku */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* EFEKT PŘI HOVERU */
+.circle:hover {
+    transform: scale(1.1); /* Zvýraznění při hoveru */
+}
+
+/* ODKAZY NA RUBRIKY */
+.circle-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* RESPONSIVITA */
+@media screen and (max-width: 600px) {
+    .circle-container {
+        gap: 15px; /* Menší mezera mezi kolečky na malých zařízeních */
+    }
+
+    .circle {
+        width: clamp(100px, 15vw, 200px); /* Dynamická velikost koleček */
+        height: clamp(100px, 15vw, 200px); /* Zachování poměru koleček */
+    }
+}

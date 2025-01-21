@@ -1,0 +1,244 @@
+
+header {
+    border-radius: 10px;
+    border: 5px solid #0033b8;
+    background-color: #fffffff1;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Horizontální zarovnání na střed */
+    width: 70%; /* Hlavička zabírá 80 % šířky stránky */
+    height: 100px;
+    display: flex; /* Aktivuje Flexbox */
+    justify-content: center; /* Horizontální zarovnání obsahu */
+    align-items: center; /* Vertikální zarovnání obsahu */
+    z-index: 1000; /* Zajišťuje, že hlavička je nahoře */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Jemný stín pro oddělení */
+}
+
+#logo {
+    width: 90px;
+    margin-right: 20px; /* Vytváří prostor mezi logem a odkazy */
+    border-radius: 10px;
+}
+
+.nav {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 15px; /* Prostor mezi odkazy */
+    position: relative; /* Nutné pro underline efekt */
+}
+
+.nav:hover {
+    text-decoration: none;
+}
+
+.navmain {
+    color: #000000;
+}
+
+.nav::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(0, 175, 0); /* Barva underline */
+    position: absolute;
+    bottom: -5px; /* Pozice underline pod textem */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease-in-out; /* Animace underline */
+}
+
+.nav:hover::after {
+    width: 100%; /* Efekt roztažení underline */
+}
+
+.nav:active {
+    color: rgb(190, 0, 0); /* Změna barvy textu při stisku */
+}
+
+@media screen and (min-width: 1800px) {
+    .nav {
+        margin: 0 50px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .nav {
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .nav {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .nav {
+        margin: 0 10px;
+    }
+    header {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .nav {
+        margin: 0 10px;
+    }
+    header {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .nav {
+        margin: 0 5px;
+    }
+    header {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .nav {
+        margin: 0 3px;
+    }
+    header {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .nav {
+        margin: 0 2px;
+    }
+    header {
+        width: 99%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .nav {
+        margin: 0 1px;
+    }
+    header {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header {
+        display: none;
+    }
+}
+
+/**
+* {
+	font-family: arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html, body {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+html {
+    background-color: white;
+    color: black;
+}
+
+header {
+    border-radius: 10px;
+    border: 5px solid rgb(190, 0, 0);
+   background-color: #ffffff;
+   position: fixed;
+}
+#logo {
+    width: 90px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+.navmain {
+    color: #000000;
+}
+
+header {
+	height: 100px;
+}
+
+#nav {
+	text-decoration: underline;
+	text-decoration-color: blue;
+	text-decoration-thickness: 3px;
+	text-underline-offset: 28px;
+}
+
+#nav:hover {
+	text-decoration-thickness: 4px;
+}
+
+.nav {
+	color: rgba(2, 3, 3, 0);
+    height: auto;
+	font-weight: 600;
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+	bottom: 55px;
+	text-decoration: none;
+}
+
+.nav-down {
+    color: #7d7d7d;
+	text-decoration: none;
+}
+
+@media screen and (orientation: portrait) and (min-aspect-ratio: 7/4), screen and (min-width: 701px) {
+    .nav {
+        margin: 20px;
+    }
+    #baner {
+        width: calc(100% - 80px);
+        margin: 0 40px;
+        margin-bottom: 40px;
+        margin-top: 20px
+    }
+    
+    .nav:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 28px;
+}
+
+    .nav-down:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+}
+
+}
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 7/4), screen and (max-width: 700px) {
+    .nav {
+        margin: 0px;
+    }
+    #baner {
+        width: calc(100% - 20px);
+        margin: 0 10px;
+        margin-bottom: 40px;
+        margin-top: 20px
+    }
+}
+header {
+    background-color: white;
+} **/
