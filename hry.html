@@ -20,6 +20,35 @@
 	</header>
     
     <main>
+
+        <section style="border-width: 5px; width: 80%;" class="sec yellow">
+            <h1 class="sec-titulek">Udělejte si svou hru a pošlete nám ji!</h1>
+            <br>
+            <form action="mailers/mail-hry.php" method="post">
+                <label for="name">Jméno a příjmení:</label>
+                <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
+                <br><br>
+            
+                <label for="nazev">Název hry:</label>
+                <input type="text" name="nazev" id="nazev" placeholder="Název kvízu" required>
+                <br><br>
+            
+                <label for="platforma">Platforma:</label>
+                <select name="platforma" id="platforma" required>
+                    <option value="scratch">Scratch</option>
+                    <option value="makecode">Microsoft MakeCode Arcade</option>
+                    <option value="mujweb">Můj Web</option>
+                </select>
+                <br><br>
+            
+                <label for="sdileni">Odkaz na sdílení:</label>
+                <textarea name="sdileni" id="sdileni" required></textarea>
+                <br><br>
+            
+                <input type="submit" value="Odeslat">
+            </form>
+        </section>
+
         <a href="https://arcade.makecode.com/56017-92836-95436-35108"><section style="border-width: 5px; width: 80%;" class="sec yellow">
             <h1 class="sec-titulek">[BETA] "A tale of cihla."</h1>
             <br>
