@@ -8,12 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Kontrola, zda jsou všechna povinná pole vyplněna
     if (!empty($name) && !empty($nazev) && !empty($platforma) && !empty($sdileni)) {
-        // Úspěšné zpracování formuláře
-        echo "<h3>Formulář byl úspěšně odeslán!</h3>";
-        echo "<p><strong>Jméno a příjmení:</strong> " . htmlspecialchars($name) . "</p>";
-        echo "<p><strong>Název hry:</strong> " . htmlspecialchars($nazev) . "</p>";
-        echo "<p><strong>Platforma:</strong> " . htmlspecialchars($platforma) . "</p>";
-        echo "<p><strong>Odkaz na sdílení:</strong> " . nl2br(htmlspecialchars($sdileni)) . "</p>";
+        // Nastavení e-mailových parametrů
+        $to = "tvuj-email@domena.cz";   // Nahraďte vaším e-mailem
+        $subject = "Nový formulářový záznam";
+        $message = "Jméno a příjmení: $name\n";
+        $message .= "Název hry: $nazev\n";
+        $message .= "Platforma: $platforma\n";
+        $message .= "Odkaz na sdílení:\n$sdileni\n";
+
+        // Hlavičky e-mailu
+        $headers = "From: noreply@vasedomena.cz\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        // Odeslání e-mailu
+        if (mail($to, $subject, $message, $headers)) {
+            echo "<h3>Formulář byl úspěšně odeslán a data byla odeslána na e-mail!</h3>";
+        } else {
+            echo "<p style='color:red;'>Došlo k chybě při odesílání e-mailu. Zkuste to prosím znovu.</p>";
+        }
     } else {
         echo "<p style='color:red;'>Prosím, vyplňte všechna povinná pole.</p>";
     }
@@ -21,3 +33,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Formulář nebyl odeslán správně.</p>";
 }
 ?>
+
