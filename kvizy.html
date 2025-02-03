@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazul</title>
+    <title>Lazul-kvízy</title>
     <link rel="manifest" href="/manifest.json">
 
     <link rel="stylesheet" href="css/header.css">
@@ -21,39 +21,39 @@
     
     <main>
         <section style="border-width: 5px; width: 80%;" class="sec red">
-            <h1 class="sec-titulek">Udělejte si svůj kvíz a my vám ho zveřejníme (pokud bude únosný)!</h1>
+            <h1 class="sec-titulek">Udělejte si svůj kvíz!</h1>
             <br>
             <form action="ukoly/email-kviz.php" method="post">
                 <!-- Jméno a název kvízu -->
                 <label for="name">Jméno a příjmení:</label>
-                <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
+                <input type="text" name="name" id="name" required>
                 <br><br>
         
                 <label for="nazev">Název kvízu:</label>
-                <input type="text" name="nazev" id="nazev" placeholder="Název kvízu" required>
+                <input type="text" name="nazev" id="nazev"required>
                 <br><br>
         
                 <!-- Otázky a odpovědi -->
                 <div id="questions-container">
                     <h2>Otázka 1</h2>
                     <label for="otazka-1">Otázka:</label>
-                    <input type="text" name="otazka[]" id="otazka-1" placeholder="Zadejte otázku" required>
+                    <input type="text" name="otazka[]" id="otazka-1" required>
                     <br>
         
                     <label for="možnost1-1">Možnost 1:</label>
-                    <input type="text" name="možnost1[]" id="možnost1-1" placeholder="Možnost 1" required>
+                    <input type="text" name="možnost1[]" id="možnost1-1" required>
                     <br>
         
                     <label for="možnost2-1">Možnost 2:</label>
-                    <input type="text" name="možnost2[]" id="možnost2-1" placeholder="Možnost 2" required>
+                    <input type="text" name="možnost2[]" id="možnost2-1" required>
                     <br>
         
                     <label for="možnost3-1">Možnost 3:</label>
-                    <input type="text" name="možnost3[]" id="možnost3-1" placeholder="Možnost 3">
+                    <input type="text" name="možnost3[]" id="možnost3-1">
                     <br>
         
                     <label for="možnost4-1">Možnost 4:</label>
-                    <input type="text" name="možnost4[]" id="možnost4-1" placeholder="Možnost 4">
+                    <input type="text" name="možnost4[]" id="možnost4-1">
                     <br>
         
                     <label for="spravnamoznost-1">Správná možnost (1-4):</label>
@@ -61,7 +61,7 @@
                     <br>
         
                     <label for="reason-1">Důvod k správné odpovědi:</label>
-                    <textarea name="reason[]" id="reason-1" placeholder="Vysvětlení správné odpovědi" required></textarea>
+                    <textarea name="reason[]" id="reason-1" required></textarea>
                     <br><br>
                 </div>
         
@@ -88,7 +88,7 @@
                     <li class="sec-item">Vojtěch Škvor</li>
                 </ul>
             </details>
-        </section>
+        </section></a>
 
         <a href="ukoly/nj-8lekce-slovicka.html"><section style="border-width: 5px; width: 80%;" class="sec yellow">
             <h1 class="sec-titulek">Procvičte si slovíčka 8.lekce v němčině</h1>
@@ -106,7 +106,7 @@
             </details>
         </section></a>
 
-        <a href="ukoly/nj-8lekce-mnoznecislo.js"><section style="border-width: 5px; width: 80%;" class="sec yellow">
+        <a href="ukoly/nj-8lekce-mnoznecislo.html"><section style="border-width: 5px; width: 80%;" class="sec yellow">
             <h1 class="sec-titulek">Procvičte si množné číslo v němčině na úrovni 8.lekce</h1>
             <br>
             <h3>O kvízu: </h3>

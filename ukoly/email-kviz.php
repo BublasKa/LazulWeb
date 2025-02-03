@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Odeslání e-mailu
     if (mail($to, $subject, $message, $headers)) {
-        echo "E-mail úspěšně odeslán.";
+        echo "Kvíz se nám úspěšně odeslal";
     } else {
         echo "Chyba při odesílání e-mailu.";
     }
