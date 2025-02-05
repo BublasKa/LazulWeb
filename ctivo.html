@@ -118,6 +118,36 @@
             <li><a href="casopisy/v2.html">2. vydání - Historický koutek</a></li>
         </section></a>
 
+        <section style="border-width: 5px; width: 80%;" class="sec red">
+            <h1 class="sec-titulek">Napište nám své čtivo</h1>
+            <br>
+            <form action="mailers/mail-clanky.php" method="post">
+                <label for="name">Jméno a příjmení:</label>
+                <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
+                <br><br>
+            
+                <label for="nazev">Titulek/Název:</label>
+                <input type="text" name="nazev" id="nazev" placeholder="Název hry" required>
+                <br><br>
+            
+                <label for="rubrika">Rubrika:</label>
+                <select name="rubrika" id="rubrika" required>
+                    <option value="veda">Věda</option>
+                    <option value="basen">Báseň</option>
+                    <option value="historie">Historie</option>
+                    <option value="sport">Sport</option>
+                    <option value="neodborne">Neodborné</option>
+                </select>
+                <br><br>
+            
+                <label for="text">Text:</label>
+                <textarea name="text" id="text" required></textarea>
+                <br><br>
+            
+                <input type="submit" value="Odeslat">
+            </form>            
+        </section>
+
         <a href="clanky/zensky-basketball.html" style="text-decoration: none;"><section style="border-width: 5px; width: 73%;" class="sec yellow">
             <h1 class="sec-titulek">Ženský basketball</h1>
             <br>
