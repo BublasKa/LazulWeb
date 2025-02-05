@@ -15,11 +15,11 @@ if (empty($name) || empty($nazev) || empty($rubrika) || empty($text)) {
 }
 
 // Předmět e-mailu
-$subject = 'Nová zpráva z formuláře hry';
+$subject = 'Nová zpráva z formuláře čtivo';
 
 // Tělo e-mailu
 $message = "
-Byla odeslána nová zpráva z formuláře hry:
+Byla odeslána nová zpráva z formuláře čtivo:
 
 Jméno a příjmení: $name
 Titulek/Název: $nazev
