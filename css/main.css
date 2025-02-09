@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: #222222f1;
+    }
+
+    .nav {
+        color: white;
+    }
+}
+
 main {
     margin-top: 120px;
 }
@@ -162,4 +172,45 @@ button {
     border-color: gray;
 }
 
+@media (prefers-color-scheme: dark) {
+    * {
+        color: white;
+    }
 
+    body {
+        background-image: url('pozadi-tmave.png');
+    }
+
+    .sec {
+        background-color: #222222f1;
+    }
+
+    .sec-titulek {
+        color: white;
+    }
+    
+    .sec-text {
+        color: white;
+    }
+
+    .sec-item {
+        color: white;
+    }
+
+    .sec-summary {
+        color: #0048ff;
+    }
+
+    .sec-item {
+        color: #0048ff;
+    }
+
+    input, textarea, select, button {
+        background-color: black;
+        color: white;
+    }
+
+    .dandd p, .dandd h1, .dandd h2, .dandd li, .dandd li a{
+        color: black;
+    }
+}
