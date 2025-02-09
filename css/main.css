@@ -134,3 +134,32 @@ button {
     margin: 7px;
     padding: 3px;
 }
+
+/*Obrázky*/
+.obrazek-sec {
+    margin: auto;
+    border-radius: 10px;
+    height: 200px;
+}
+
+/* Fonty */
+
+@font-face {
+    font-family: 'Gagalin';
+    src: url('fonts/Gagalin-Regular.otf') format('opentype'),
+    url('fonts/Gagalin-Regular.woff2') format('woff2'),
+    url('fonts/Gagalin-Regular.woff') format('woff'),
+    url('fonts/Gagalin-Regular.ttf') format('truetype');
+}
+
+.gagalin {
+    font-family: 'Gagalin', Impact, fantasy !important;
+    font-size: 160%;
+}
+
+.dandd {
+    background-image: url('pozadi-d&d.png');
+    border-color: gray;
+}
+
+

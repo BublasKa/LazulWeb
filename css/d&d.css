@@ -1,0 +1,121 @@
+/* Základní reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gagalin';
+    src: url('fonts/Gagalin-Regular.otf') format('opentype'),
+    url('fonts/Gagalin-Regular.woff2') format('woff2'),
+    url('fonts/Gagalin-Regular.woff') format('woff'),
+    url('fonts/Gagalin-Regular.ttf') format('truetype');
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Tělo stránky s obrázkovým pozadím */
+body {
+    background-image: url('pozadi-d&d.png');  /* Cesta k obrázku */
+    background-size: cover;                   /* Obrázek pokryje celé pozadí */
+    background-position: center;              /* Obrázek vystředěný */
+    background-repeat: repeat;             /* Bez opakování */
+    font-family: 'Arial', sans-serif;
+    color: #000000;                              /* Tmavší text pro lepší kontrast */
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+/* Obsah stránky */
+h2 {
+    font-family: 'Gagalin';
+    font-size: 3.5rem;                          /* Světlý text pro nadpisy */
+    margin: 20px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #6e6e6e50;        /* Jemná spodní čára */
+}
+
+p {
+    font-family: 'Grenze';
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #000000;                            /* Světle šedý text */
+    text-align: justify;
+}
+
+h3 {
+    font-family: 'Grenze';
+    font-size: 1.85rem;
+}
+
+ul {
+    font-family: 'Grenze';
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #000000;                            /* Světle šedý text */
+    text-align: justify;
+}
+
+/* Audio sekce */
+.audio-section {
+    margin-top: 10px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Responzivní design */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    audio {
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    img {
+        width: 80%;
+        margin: 0 10%;
+    }
+}
+
+@media (min-width: 1500px) {
+    img {
+        width: 65%;
+        margin: 0 17.5%;
+    }
+}
+
+@media (min-width: 2000px) {
+    img {
+        width: 50%;
+        margin: 0 25%;
+    }
+}
+
+@media (min-width: 2800px) {
+    img {
+        width: 30%;
+        margin: 0 35%;
+    }
+}
