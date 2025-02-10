@@ -137,6 +137,15 @@ header {
     }
 }
 
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: rgba(12, 12, 12, 0.94);
+    }
+
+    .nav {
+        color: rgb(223, 118, 118);
+    }
+}
 /**
 * {
 	font-family: arial, sans-serif;

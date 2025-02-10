@@ -10,11 +10,11 @@
 
 @media (prefers-color-scheme: dark) {
     header {
-        background-color: #222222f1;
+        background-color: rgba(12, 12, 12, 0.94);
     }
 
     .nav {
-        color: white;
+        color: rgb(223, 118, 118);
     }
 }
 
@@ -152,6 +152,10 @@ button {
     height: 200px;
 }
 
+.obrazek-long {
+    height: 125px;
+}
+
 /* Fonty */
 
 @font-face {
@@ -174,7 +178,7 @@ button {
 
 @media (prefers-color-scheme: dark) {
     * {
-        color: white;
+        color: rgb(177, 194, 173);
     }
 
     body {
@@ -182,35 +186,31 @@ button {
     }
 
     .sec {
-        background-color: #222222f1;
+        background-color:rgba(12, 12, 12, 0.94);
     }
 
     .sec-titulek {
-        color: white;
+        color: rgb(187, 184, 138);
     }
     
     .sec-text {
-        color: white;
-    }
-
-    .sec-item {
-        color: white;
+        color: rgb(158, 143, 143);
     }
 
     .sec-summary {
-        color: #0048ff;
+        color:rgb(59, 114, 255);
     }
 
     .sec-item {
-        color: #0048ff;
+        color:rgb(148, 178, 255);
     }
 
     input, textarea, select, button {
-        background-color: black;
-        color: white;
+        background-color: rgb(12, 12, 12);
+        color: rgb(177, 194, 173);
     }
 
-    .dandd p, .dandd h1, .dandd h2, .dandd li, .dandd li a{
+    .dandd p, .dandd h1, .dandd h2, .dandd li, .dandd li a, .dandd strong{
         color: black;
     }
 }
