@@ -314,7 +314,7 @@ function submitAnswer(answer) {
     const currentTask = shuffledTasks[currentTaskIndex];
     const feedback = document.getElementById("feedback");
 
-    if (answer === currentTask.correct) {
+    if (answer == currentTask.correct) {
         feedback.textContent = "Správně!";
         feedback.style.color = "green";
 
@@ -354,6 +354,8 @@ function loadNextTask() {
         <br>
         <button onclick="submitAnswer(1)"><h1>${currentTask.one}</h1></button>
         <button onclick="submitAnswer(2)"><h1>${currentTask.two}</h1></button>
+        <button onclick="submitAnswer(3)"><h1>${currentTask.three}</h1></button>
+        <button onclick="submitAnswer(4)"><h1>${currentTask.four}</h1></button>
     `;
     document.getElementById("feedback").textContent = "";
 }
@@ -365,6 +367,8 @@ function freezTask() {
         <br>
         <button onclick=""><h1>${currentTask.one}</h1></button>
         <button onclick=""><h1>${currentTask.two}</h1></button>
+        <button onclick=""><h1>${currentTask.three}</h1></button>
+        <button onclick=""><h1>${currentTask.four}</h1></button>
     `;
 }
 
