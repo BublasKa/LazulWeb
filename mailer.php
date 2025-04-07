@@ -7,7 +7,7 @@
 
     // Kontroluje data popř. přesměruje na chybovou adresu
     if (empty($name) OR empty($message)) {
-        header("Location: https://www.prev.lazul.cz/index.html?success=-1#form");
+        header("Location: https://www.lazul.cz/index.html?success=-1#form");
         exit;
     }
 
@@ -32,6 +32,6 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Přesměrování na stránku, pokud vše proběhlo v pořádku
-    header("Location:https://www.prev.lazul.cz/index.html?success=1#form");
+    header("Location:https://www.lazul.cz/index.html?success=1#form");
 
 ?>
