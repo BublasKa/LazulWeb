@@ -5,9 +5,9 @@ let questionCount = 1;
             const container = document.getElementById("questions-container");
 
             const questionHTML = `
-                <h2>Otázka ${questionCount}</h2>
+                <h2 style="margin-bottom: 6px;  font-size: 1.8rem;">Otázka ${questionCount}</h2>
                 <label for="otazka-${questionCount}">Otázka:</label>
-                <input type="text" name="otazka[]" id="otazka-${questionCount}" required>
+                <input class="red" type="text" name="otazka[]" id="otazka-${questionCount}" required>
                 <br>
 
                 <label for="možnost1-${questionCount}">Možnost 1:</label>
@@ -27,11 +27,11 @@ let questionCount = 1;
                 <br>
 
                 <label for="spravnamoznost-${questionCount}">Správná možnost (1-4):</label>
-                <input type="number" name="spravnamoznost[]" id="spravnamoznost-${questionCount}" min="1" max="4" required>
+                <input class="green" type="number" name="spravnamoznost[]" id="spravnamoznost-${questionCount}" min="1" max="4" required>
                 <br>
 
                 <label for="reason-${questionCount}">Důvod k správné odpovědi:</label>
-                <textarea name="reason[]" id="reason-${questionCount}" required></textarea>
+                <textarea class="yellow" name="reason[]" id="reason-${questionCount}" required></textarea>
                 <br><br>
             `;
 

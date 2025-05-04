@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/kolecka.css">
     <link rel="stylesheet" href="css/knihovnacasopisu.css">
+    <link rel="stylesheet" href="css/formular.css">
 </head>
 <body>
     <!-- Hlavička -->
@@ -135,15 +136,15 @@
             <br>
             <form action="mailers/mail-clanky.php" method="post">
                 <label for="name">Jméno a příjmení:</label>
-                <input type="text" name="name" id="name" required>
+                <input class="green" type="text" name="name" id="name" required>
                 <br><br>
             
                 <label for="nazev">Titulek/Název:</label>
-                <input type="text" name="nazev" id="nazev" required>
+                <input class="blue" type="text" name="nazev" id="nazev" required>
                 <br><br>
             
                 <label for="rubrika">Rubrika:</label>
-                <select name="rubrika" id="rubrika" required>
+                <select class="red" name="rubrika" id="rubrika" required>
                     <option value="veda">Věda</option>
                     <option value="basen">Báseň</option>
                     <option value="historie">Historie</option>
@@ -153,10 +154,10 @@
                 <br><br>
             
                 <label for="text">Text:</label>
-                <textarea name="text" id="text" required></textarea>
+                <textarea class="yellow" name="text" id="text" required></textarea>
                 <br><br>
             
-                <input type="submit" value="Odeslat">
+                <input class="submit" type="submit" value="Odeslat">
             </form>            
         </section>
 

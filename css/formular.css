@@ -1,0 +1,94 @@
+/* Vzhled kontejneru formuláře */
+form {
+    background-color: var(--form-bg);
+    color: var(--form-text);
+    padding: 1.5em;
+    border-radius: 1rem;
+    max-width: 1050px;
+    margin: 2em auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Vstupní pole */
+  input, textarea, select, button {
+    width: 100%;
+    padding: 0.8em 1em;
+    font-size: 1rem;
+    margin-bottom: 1em;
+    border: 5px solid var(--border-color);
+    border-radius: 0.75rem;
+    background-color: var(--input-bg);
+    color: var(--form-text);
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, textarea:focus, select:focus, button:hover {
+    border-color: var(--focus-color);
+    box-shadow: 0 0 5px var(--focus-glow);
+    outline: none;
+  }
+  
+  /* Tlačítko */
+  .submit {
+    width: 100%;
+    padding: 0.8em 1em;
+    font-size: 1rem;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit:hover {
+    background-color: var(--button-hover);
+  }
+  
+  /* Barevné varianty okrajů */
+  input.red, textarea.red, select.red {
+    border-color: #bd2800;
+  }
+  input.blue, textarea.blue, select.blue {
+    border-color: #0033b8;
+  }
+  input.green, textarea.green, select.green {
+    border-color: #00cf15;
+  }
+  input.yellow, textarea.yellow, select.yellow {
+    border-color: #fff02a;
+  }
+  
+  /* Textarea větší */
+  textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  /* Proměnné: světlý režim výchozí */
+  :root {
+    --form-bg: #f7f7f7;
+    --form-text: #111;
+    --input-bg: #ffffff;
+    --border-color: #ccc;
+    --focus-color: #818181;
+    --focus-glow: rgba(0, 51, 184, 0.4);
+    --button-bg: #0033b8;
+    --button-hover: #001e80;
+  }
+  
+  /* Tmavý režim */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --form-bg: #1f1f1f;
+      --form-text: #f2f2f2;
+      --input-bg: #2a2a2a;
+      --border-color: #444;
+      --focus-color: #252525;
+      --focus-glow: rgba(51, 102, 255, 0.5);
+      --button-bg: #3366ff;
+      --button-hover: #0033b8;
+    }
+  }
+  

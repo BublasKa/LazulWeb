@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/formular.css">
 </head>
 <body>
     <header>
@@ -23,21 +24,21 @@
         <section style="border-width: 5px; width: 80%;" class="sec red">
             <h1 class="sec-titulek">Udělejte si svůj kvíz!</h1>
             <br>
-            <form action="ukoly/email-kviz.php" method="post">
+            <form style="max-width: 1600px;" action="ukoly/email-kviz.php" method="post">
                 <!-- Jméno a název kvízu -->
                 <label for="name">Jméno a příjmení:</label>
-                <input type="text" name="name" id="name" required>
+                <input class="green" type="text" name="name" id="name" required>
                 <br><br>
         
                 <label for="nazev">Název kvízu:</label>
-                <input type="text" name="nazev" id="nazev"required>
+                <input class="blue" type="text" name="nazev" id="nazev"required>
                 <br><br>
         
                 <!-- Otázky a odpovědi -->
                 <div id="questions-container">
-                    <h2>Otázka 1</h2>
+                    <h2 style="margin-bottom: 6px; font-size: 1.8rem;">Otázka 1</h2>
                     <label for="otazka-1">Otázka:</label>
-                    <input type="text" name="otazka[]" id="otazka-1" required>
+                    <input class="red" type="text" name="otazka[]" id="otazka-1" required>
                     <br>
         
                     <label for="možnost1-1">Možnost 1:</label>
@@ -57,11 +58,11 @@
                     <br>
         
                     <label for="spravnamoznost-1">Správná možnost (1-4):</label>
-                    <input type="number" name="spravnamoznost[]" id="spravnamoznost-1" min="1" max="4" required>
+                    <input class="green" type="number" name="spravnamoznost[]" id="spravnamoznost-1" min="1" max="4" required>
                     <br>
         
                     <label for="reason-1">Důvod k správné odpovědi:</label>
-                    <textarea name="reason[]" id="reason-1" required></textarea>
+                    <textarea class="yellow" name="reason[]" id="reason-1" required></textarea>
                     <br><br>
                 </div>
         
@@ -70,12 +71,12 @@
                 <br><br>
         
                 <!-- Odeslání formuláře -->
-                <input type="submit" value="Odeslat">
+                <input class="submit" type="submit" value="Odeslat">
             </form>        
         </section></a>
 
 
-        <a href="ukoly/nj-4lekce-slovicka.html"><section style="border-width: 5px; width: 80%;" class="sec yellow">
+        <a href="ukoly/nj-10lekce-slovicka.html"><section style="border-width: 5px; width: 80%;" class="sec yellow">
             <h1 class="sec-titulek">Procvičte si slovíčka 10.lekce v němčině</h1>
             <br>
             <h3>O kvízu: </h3>

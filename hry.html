@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/formular.css">
 </head>
 <body>
     <header>
@@ -26,15 +27,15 @@
             <br>
             <form action="mailers/mail-hry.php" method="post">
                 <label for="name">Jméno a příjmení:</label>
-                <input type="text" name="name" id="name" placeholder="Vaše jméno" required>
+                <input class="green" type="text" name="name" id="name" placeholder="Vaše jméno" required>
                 <br><br>
             
                 <label for="nazev">Název hry:</label>
-                <input type="text" name="nazev" id="nazev" placeholder="Název hry" required>
+                <input class="blue" type="text" name="nazev" id="nazev" placeholder="Název hry" required>
                 <br><br>
             
                 <label for="platforma">Platforma:</label>
-                <select name="platforma" id="platforma" required>
+                <select class="red" name="platforma" id="platforma" required>
                     <option value="scratch">Scratch</option>
                     <option value="makecode">Microsoft MakeCode Arcade</option>
                     <option value="mujweb">Můj Web</option>
@@ -42,10 +43,10 @@
                 <br><br>
             
                 <label for="sdileni">Odkaz na sdílení:</label>
-                <textarea name="sdileni" id="sdileni" required></textarea>
+                <textarea class="yellow" name="sdileni" id="sdileni" required></textarea>
                 <br><br>
             
-                <input type="submit" value="Odeslat">
+                <input class="submit" type="submit" value="Odeslat">
             </form>            
         </section>
 
